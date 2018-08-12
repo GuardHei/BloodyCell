@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="NavMeshComponents" t="Include">
+          <e p="Editor" t="Include">
+            <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+            <e p="NavMeshLinkEditor.cs" t="Include" />
+            <e p="NavMeshModifierEditor.cs" t="Include" />
+            <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+            <e p="NavMeshSurfaceEditor.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="NavMeshLink.cs" t="Include" />
+            <e p="NavMeshModifier.cs" t="Include" />
+            <e p="NavMeshModifierVolume.cs" t="Include" />
+            <e p="NavMeshSurface.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="BulletController.cs" t="Include" />
+            <e p="BulletManager.cs" t="Include" />
+            <e p="BurstParticleController.cs" t="Include" />
+            <e p="CameraShaker.cs" t="Include" />
+            <e p="CancerController.cs" t="Include" />
+            <e p="CancerManager.cs" t="Include" />
+            <e p="EnemyController.cs" t="Include" />
+            <e p="EnemyManager.cs" t="Include" />
+            <e p="ExplosionController.cs" t="Include" />
+            <e p="ExplosionManager.cs" t="Include" />
+            <e p="GameSceneController.cs" t="Include" />
+            <e p="HealthBarController.cs" t="Include" />
+            <e p="IWeapon.cs" t="Include" />
+            <e p="LayerManager.cs" t="Include" />
+            <e p="ParticleController.cs" t="Include" />
+            <e p="ParticleDecalController.cs" t="Include" />
+            <e p="ParticleDecalManager.cs" t="Include" />
+            <e p="ParticleManager.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="PrimitiveHelper.cs" t="Include" />
+            <e p="ShooterController.cs" t="Include" />
+            <e p="StartSceneController.cs" t="Include" />
+            <e p="TerrainController.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="BloodyCell.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_BloodyCell.-57539716.00" t="ExcludeRecursive" />
+  </component>
+</project>
