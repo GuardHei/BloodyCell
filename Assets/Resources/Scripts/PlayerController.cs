@@ -174,6 +174,8 @@ public class PlayerController : MonoBehaviour {
 		explosion.transform.position = transform.position;
 		explosion.Explode();
 		onDeath?.Invoke(reason);
+		if (_displayChemoTreatmentCoroutine != null) StopCoroutine(_displayChemoTreatmentCoroutine);
+		_displayChemoTreatmentCoroutine = null;
 	}
 
 	public void SwitchWeapon(int index) {

@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   identifierName: Cancer 0
-  health: 500
+  health: 700
   bleedSound: {fileID: 8300000, guid: eaa9b52bc10174345b971e051c78e842, type: 3}
   bleedEffect: Blood 1
   explodeSound: {fileID: 0}

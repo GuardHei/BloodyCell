@@ -333,13 +333,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnInterval: 5
-  minSpawnNumber: 1
+  minSpawnNumber: 2
   maxSpawnNumber: 3
   spawnSets:
   - cancerName: Cancer 0
-    weight: 8
-  - cancerName: Cancer 1
     weight: 10
+  - cancerName: Cancer 1
+    weight: 6
   - cancerName: Cancer 2
     weight: 3
   _size: {x: 50, y: 50}
@@ -1379,28 +1379,28 @@ MonoBehaviour:
   - scoreRequired: 0
     firePower: 25
     recoilTime: 0.2
-    recoilShake: {x: 0.6, y: 0.6, z: 0.6}
+    recoilShake: {x: 0.3, y: 0.3, z: 0.3}
     weaponBaseSettings:
       doesHit: 1
       doesStun: 0
       doesDamage: 1
       hitVelocity: 1.5
       stunDuration: 0
-      damage: 40
+      damage: 20
     fireOrigins:
     - offset: {x: 1.2, y: 0, z: 0}
       rotation: 0
   - scoreRequired: 10
     firePower: 28
     recoilTime: 0.18
-    recoilShake: {x: 0.8, y: 0.8, z: 0.8}
+    recoilShake: {x: 0.4, y: 0.4, z: 0.4}
     weaponBaseSettings:
       doesHit: 1
       doesStun: 0
       doesDamage: 1
       hitVelocity: 2
       stunDuration: 0
-      damage: 50
+      damage: 20
     fireOrigins:
     - offset: {x: 1.2, y: 0, z: 0.4}
       rotation: 0
@@ -1409,14 +1409,14 @@ MonoBehaviour:
   - scoreRequired: 30
     firePower: 30
     recoilTime: 0.15
-    recoilShake: {x: 1, y: 1, z: 1}
+    recoilShake: {x: 0.5, y: 0.5, z: 0.5}
     weaponBaseSettings:
       doesHit: 1
       doesStun: 0
       doesDamage: 1
       hitVelocity: 2.5
       stunDuration: 0
-      damage: 50
+      damage: 25
     fireOrigins:
     - offset: {x: 1.2, y: 0, z: 0.3}
       rotation: 7.5
@@ -1424,37 +1424,37 @@ MonoBehaviour:
       rotation: 0
     - offset: {x: 1.2, y: 0, z: -0.3}
       rotation: -7.5
-  - scoreRequired: 60
+  - scoreRequired: 80
     firePower: 32
     recoilTime: 0.12
-    recoilShake: {x: 1.2, y: 1.2, z: 1.2}
+    recoilShake: {x: 0.6, y: 0.6, z: 0.6}
     weaponBaseSettings:
       doesHit: 1
       doesStun: 1
       doesDamage: 1
       hitVelocity: 3
       stunDuration: 0.2
-      damage: 55
+      damage: 25
     fireOrigins:
     - offset: {x: 1.2, y: 0, z: 0.7}
       rotation: 0
-    - offset: {x: 0, y: 0, z: 0.3}
-      rotation: 1.5
-    - offset: {x: 0, y: 0, z: -0.3}
-      rotation: 1.5
-    - offset: {x: 0, y: 0, z: -0.7}
-      rotation: 1.2
-  - scoreRequired: 100
+    - offset: {x: 1.5, y: 0, z: 0.3}
+      rotation: 0
+    - offset: {x: 1.5, y: 0, z: -0.3}
+      rotation: 0
+    - offset: {x: 1.2, y: 0, z: -0.7}
+      rotation: 0
+  - scoreRequired: 150
     firePower: 35
     recoilTime: 0.1
-    recoilShake: {x: 1.5, y: 1.5, z: 1.5}
+    recoilShake: {x: 0.7, y: 0.7, z: 0.7}
     weaponBaseSettings:
       doesHit: 1
       doesStun: 1
       doesDamage: 1
       hitVelocity: 3.5
       stunDuration: 0.5
-      damage: 60
+      damage: 30
     fireOrigins:
     - offset: {x: 1.2, y: 0, z: 0.5}
       rotation: 15
