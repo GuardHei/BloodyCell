@@ -56,13 +56,7 @@ public class GameSceneController : MonoBehaviour {
 		LevelUp(Instance.levelSettingses[0]);
 	}
 
-	private void OnPlayerDeath(string reason) {
-		deathReason = reason;
-		isGameOver = true;
-		Invoke("GameOver", 5f);
-	}
-
-	private void GameOver() {
+	public void Replay() {
 		EnemyManager.Reset();
 		ParticleDecalManager.Reset();
 		ExplosionManager.Reset();
@@ -73,6 +67,17 @@ public class GameSceneController : MonoBehaviour {
 		CancerController[] cancers = FindObjectsOfType<CancerController>();
 		foreach (var cancer in cancers) CancerManager.Recycle(cancer);
 		CancerManager.Instance.Deactivate();
+		
+		Play();
+	}
+
+	private void OnPlayerDeath(string reason) {
+		deathReason = reason;
+		isGameOver = true;
+		GameOver();
+	}
+
+	private void GameOver() {
 		gameOverUI.SetActive(true);
 	}
 

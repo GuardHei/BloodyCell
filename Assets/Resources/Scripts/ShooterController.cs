@@ -44,6 +44,19 @@ public class ShooterController : MonoBehaviour, IWeapon {
 		if (commandBufferLength < 0) _isFiring = false;
 	}
 
+	public void CancelAttack() {
+		_isFiring = false;
+		_commandBuffer = 0;
+		_isRecoiling = false;
+		if (_recoilCoroutine != null) {
+			StopCoroutine(_recoilCoroutine);
+			_recoilCoroutine = null;
+		}
+
+		transform.localPosition = PlayerController.Zero;
+		transform.localRotation = Quaternion.identity;
+	}
+
 	private void Update() {
 		if (_isFiring) {
 			if (!_isRecoiling) Fire();

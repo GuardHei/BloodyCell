@@ -31,10 +31,10 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody _rigidbody;
 	private int _currentWeaponIndex = -1;
 	private IWeapon _currentWeapon;
-	private float horizontal;
-	private float vertical;
-	private bool hasMovedHorizontally;
-	private bool hasMovedVertically;
+	private bool _hasMovedHorizontally;
+	private bool _hasMovedVertically;
+	private float _horizontal;
+	private float _vertical;
 	private bool _isAttacking;
 	private Coroutine _displayChemoTreatmentCoroutine;
 
@@ -80,32 +80,23 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void Move() {
-		horizontal = 0f;
-		vertical = 0f;
-		hasMovedHorizontally = true;
-		hasMovedVertically = true;
-
-		if (Input.GetKey(KeyCode.W)) vertical = 1f;
-		else if (Input.GetKeyUp(KeyCode.W)) vertical = Input.GetKey(KeyCode.S) ? -1f : 0f;
-		else if (Input.GetKey(KeyCode.S)) vertical = -1f;
-		else if (Input.GetKeyUp(KeyCode.S)) vertical = Input.GetKey(KeyCode.W) ? 1f : 0f;
-		else hasMovedHorizontally = false;
-
-		if (Input.GetKey(KeyCode.D)) horizontal = 1f;
-		else if (Input.GetKeyUp(KeyCode.D)) horizontal = Input.GetKey(KeyCode.A) ? -1f : 0f;
-		else if (Input.GetKey(KeyCode.A)) horizontal = -1f;
-		else if (Input.GetKeyUp(KeyCode.A)) horizontal = Input.GetKey(KeyCode.D) ? 1f : 0f;
-		else hasMovedVertically = false;
-
 		/*
-		horizontal = Input.GetAxis("Horizontal");
-		vertical = Input.GetAxis("Vertical");
+		_horizontal = Input.GetAxis("Horizontal");
+		_vertical = Input.GetAxis("Vertical");
 
-		if (Mathf.Abs(horizontal) < .3f) horizontal = 0f;
-		if (Mathf.Abs(vertical) < .3f) vertical = 0f;
+		if (Mathf.Abs(_horizontal) < .3f) _horizontal = 0f;
+		if (Mathf.Abs(_vertical) < .3f) _vertical = 0f;
 		*/
+		
+		if (Input.GetKey(KeyCode.D)) _horizontal = 1f;
+		else if (Input.GetKey(KeyCode.A)) _horizontal = -1f;
+		else _horizontal = 0f;
+		
+		if (Input.GetKey(KeyCode.W)) _vertical = 1f;
+		else if (Input.GetKey(KeyCode.S)) _vertical = -1f;
+		else _vertical = 0f;
 
-		if (hasMovedHorizontally || hasMovedVertically) _rigidbody.velocity = new Vector3(horizontal * speed, 0, vertical * speed);
+		_rigidbody.velocity = new Vector3(_horizontal * speed, 0, _vertical * speed);
 	}
 
 	private void Turn() {
@@ -169,6 +160,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void Die(string reason) {
+		foreach (var weapon in weapons) (weapon as ShooterController)?.CancelAttack();
 		gameObject.SetActive(false);
 		ExplosionController explosion = ExplosionManager.Get(explodeEffect);
 		explosion.transform.position = transform.position;
